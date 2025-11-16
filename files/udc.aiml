@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+    <pattern>APA KABAR</pattern>
+    <template>baik. Saya siap membantu Anda memahami topik penelitian toxic language pada DOTA 2 ini. bagaimana dengan kamu</template>
+  </category>
+  
+    <category>
+    <pattern>baik</pattern>
+    <that>bagaimana dengan kamu</that>
+    <template>Syukurlah, mari kita bahas topik penelitian ini</template>
+  </category>
+  
+      <category>
+    <pattern>baik</pattern>
+    <template>anda berbicara tanpa konteks</template>
+  </category>
+</aiml>
