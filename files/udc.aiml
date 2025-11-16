@@ -168,5 +168,31 @@
         Atau katakan "SELESAI" untuk mengakhiri pembahasan.</template>
     </category>
   </topic>
-  
+    <category>
+    <pattern>SAYA *</pattern>
+    <template>
+      <random>
+        <li>Oh begitu, ceritakan lebih lanjut tentang <star/>.</li>
+        <li>Menarik! Saya hanya bisa menjawab pertanyaan seputar topik penelitian DOTA 2 saat ini.</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <condition name="topic">
+        <li value="jurnal_dota2">
+          Maaf, Anda masih berada dalam topik penelitian. Silakan tanyakan METODE, DATASET, HASIL, atau ucapkan SELESAI.
+        </li>
+        <li>
+          <random>
+            <li>Maaf, aku belum mengerti itu.</li>
+            <li>Bisa katakan dengan cara lain?</li>
+            <li>Aku masih belajar. Coba tanyakan "APA KABAR" atau "CERITAKAN TENTANG TOPIK INI".</li>
+          </random>
+        </li>
+      </condition>
+    </template>
+  </category>
 </aiml>
