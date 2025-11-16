@@ -72,4 +72,101 @@
     <pattern>BAHAS TOPIKNYA</pattern>
     <template><srai>CERITAKAN TENTANG TOPIK INI</srai></template>
   </category>
+  
+    <topic name="jurnal_dota2">
+
+    <category>
+      <pattern>APA TUJUAN PENELITIAN INI</pattern>
+      <template>Tujuan utamanya adalah membuat model otomatis yang dapat mendeteksi bahasa yang berbahaya (toxic) pada teks percakapan pemain DOTA 2. Ini dilakukan untuk menjaga interaksi pengguna yang sehat.</template>
+    </category>
+    <category>
+      <pattern>TUJUANNYA APA</pattern>
+      <template><srai>APA TUJUAN PENELITIAN INI</srai></template>
+    </category>
+
+    <category>
+      <pattern>METODE UTAMA YANG DIGUNAKAN</pattern>
+      <template>Metode utama yang digunakan adalah **Logistic Regression** untuk klasifikasi biner (toxic atau non-toxic), dan **Term Frequency-Inverse Document Frequency (TF-IDF)** untuk transformasi teks atau pembobotan fitur kata.</template>
+    </category>
+    <category>
+      <pattern>ALGORITMA APA YANG DIPAKAI</pattern>
+      <template><srai>METODE UTAMA YANG DIGUNAKAN</srai></template>
+    </category>
+    
+    <category>
+      <pattern>MENGAPA MENGGUNAKAN LOGISTIC REGRESSION</pattern>
+      <template>Algoritma Regresi Logistik dipilih karena efektif dalam menangani klasifikasi biner dan memberikan pemahaman yang jelas mengenai kontribusi tiap fitur linguistik dalam memprediksi probabilitas suatu kelas.</template>
+    </category>
+
+    <category>
+      <pattern>KARAKTERISTIK DATASET</pattern>
+      <template>Dataset penelitian ini terdiri dari **3.268** data chat DOTA 2 yang dikumpulkan melalui web scraping. Data terbagi menjadi: **1.284 data Toxic (39.3%)** dan **1.984 data Non-Toxic (60.7%)**.</template>
+    </category>
+    <category>
+      <pattern>BERAPA BANYAK DATANYA</pattern>
+      <template><srai>KARAKTERISTIK DATASET</srai></template>
+    </category>
+    
+    <category>
+      <pattern>CONTOH DATA TOXIC</pattern>
+      <template>Contoh data yang dilabeli 'Toxic' (1) adalah ujaran yang mengandung slang negatif dan emosi negatif, misalnya: "noob team can't play", "wtf are you doing?", atau "anjg player feed again".</template>
+    </category>
+    
+    <category>
+      <pattern>BAGAIMANA DATA DIBAGI</pattern>
+      <template>Data dibagi menggunakan metode *train-test split* dengan rasio **80% untuk data latih (2.614 data)** dan **20% untuk data uji (654 data)**.</template>
+    </category>
+
+    <category>
+      <pattern>TAHAPAN PRE-PROCESSING</pattern>
+      <template>Tahapan *pre-processing* terdiri dari lima langkah penting:
+1. **Cleaning**: Menghapus angka, tanda baca, simbol, dan karakter tidak relevan.
+2. **Case Folding**: Mengubah semua huruf menjadi huruf kecil (*lowercase*).
+3. **Tokenization**: Memecah teks menjadi unit kata individual.
+4. **Stopword Removal**: Menghapus kata-kata umum yang tidak signifikan.
+5. **Stemming**: Mengubah kata ke bentuk dasarnya (root word).</template>
+    </category>
+
+    <category>
+      <pattern>MENGAPA MENGGUNAKAN TF IDF</pattern>
+      <template>TF-IDF digunakan untuk menilai tingkat kepentingan suatu kata. Kata-kata yang merupakan indikasi kuat toxic (seperti "noob", "anjg", "wtf") akan mendapat bobot tinggi, sehingga model Regresi Logistik dapat mengenali pola tersebut dengan lebih akurat.</template>
+    </category>
+    <category>
+      <pattern>HASILNYA BAGAIMANA</pattern>
+      <template><srai>BAGAIMANA HASIL AKURASINYA</srai></template>
+    </category>
+    <category>
+      <pattern>AKURASINYA BERAPA</pattern>
+      <template><srai>BAGAIMANA HASIL AKURASINYA</srai></template>
+    </category>
+
+    <category>
+      <pattern>APA KESIMPULANNYA</pattern>
+      <template>Kesimpulannya, kombinasi TF-IDF dan Logistic Regression terbukti efektif dalam mengklasifikasikan slang berbahaya (toxic) dalam percakapan pemain DOTA 2. Model ini memiliki potensi untuk diperluas sebagai sistem pendeteksi ujaran buruk dalam konteks komunikasi digital lainnya.</template>
+    </category>
+
+    <category>
+      <pattern>SELESAI</pattern>
+      <template>
+        Oke, kita selesai membahas Topik Penelitian ini.
+        <set name="topic"></set>
+        Senang bisa membantu! Mau ngobrolin apa lagi?</template>
+    </category>
+    
+    <category>
+      <pattern>KELUAR</pattern>
+      <template><srai>SELESAI</srai></template>
+    </category>
+
+    <category>
+      <pattern>*</pattern>
+      <template>
+        Maaf, saya tidak mengerti pertanyaan Anda dalam konteks Topik Penelitian DOTA 2. Anda bisa tanyakan tentang:
+        - "METODE UTAMA YANG DIGUNAKAN"
+        - "BAGAIMANA HASIL AKURASINYA"
+        - "KARAKTERISTIK DATASET"
+        Atau katakan "SELESAI" untuk mengakhiri pembahasan.</template>
+    </category>
+  </topic>
+  
 </aiml>
