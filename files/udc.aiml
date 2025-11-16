@@ -15,4 +15,61 @@
     <pattern>baik</pattern>
     <template>anda berbicara tanpa konteks</template>
   </category>
+  
+   <category>
+    <pattern>HALO</pattern>
+    <template>
+      <random>
+        <li>Halo. Mari kita telusuri topik Klasifikasi Toxic Language pada DOTA 2.</li>
+        <li>Iya halo, saya telah memuat data penelitian Anda. Silakan bertanya.</li>
+      </random>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>HI</pattern>
+    <template><srai>HALO</srai></template>
+  </category>
+
+  <category>
+    <pattern>NAMA SAYA *</pattern>
+    <template>Halo <set name="nama"><star/></set>! Senang bertemu dengan Anda. Mari kita mulai pembahasan topik.</template>
+  </category>
+  
+  <category>
+    <pattern>SIAPA NAMA SAYA</pattern>
+    <template>
+      <condition name="nama">
+        <li value="*">Nama kamu <get name="nama"/>. Aku ingat!</li>
+        <li>Anda belum memberitahu namamu.</li>
+      </condition>
+    </template>
+  </category>
+    <category>
+    <pattern>CERITAKAN TENTANG TOPIK INI</pattern>
+    <template>
+      Tentu. Topik penelitian ini adalah **Klasifikasi Bahasa Berbahaya (Toxic Language) pada percakapan pemain game DOTA 2** menggunakan NLP dan Regresi Logistik.
+      
+      <set name="topic">jurnal_dota2</set>
+      
+      Kita sekarang ada di dalam Topik Penelitian ini.
+      Anda bisa bertanya tentang detail seperti:
+      - "APA TUJUAN PENELITIAN"
+      - "METODE UTAMA YANG DIGUNAKAN"
+      - "MENGAPA MENGGUNAKAN LOGISTIC REGRESSION"
+      - "KARAKTERISTIK DATASET"
+      - "CONTOH DATA TOXIC"
+      - "TAHAPAN PREPROCESSING"
+      
+      Katakan "SELESAI" untuk keluar dari pembahasan topik ini.
+    </template>
+  </category>
+  <category>
+    <pattern>TENTANG APA PENELITIAN INI</pattern>
+    <template><srai>CERITAKAN TENTANG TOPIK INI</srai></template>
+  </category>
+  <category>
+    <pattern>BAHAS TOPIKNYA</pattern>
+    <template><srai>CERITAKAN TENTANG TOPIK INI</srai></template>
+  </category>
 </aiml>
