@@ -60,6 +60,10 @@
       - "KARAKTERISTIK DATASET"
       - "CONTOH DATA TOXIC"
       - "TAHAPAN PREPROCESSING"
+      - "MENGAPA MENGGUNAKAN TF IDF"
+      - "HASILNYA BAGAIMANA"
+      - "AKURASINYA BERAPA"
+      - "APA KESIMPULANNYA"
       
       Katakan "SELESAI" untuk keluar dari pembahasan topik ini.
     </template>
